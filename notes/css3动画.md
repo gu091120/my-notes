@@ -22,9 +22,9 @@
 
 控制补间动画的因素：
 
-- 需要过度动画属性（transition-property）:可以是全局属性（all）
+- 需要过度动画属性(transition-property):可以是全局属性（all）
 - 过度持续时间(transition-duration):1s
-- 时间和变化（transition-timing-function）:线性(linter)、减速（ease）、加速（ease-in）、减速（ease-out）、先加速后减速(ease-in-out)
-- 延迟执行时间(transition-delay) ：过渡延迟。多长时间后再执行这个过渡动画。
+- 时间和变化(transition-timing-function）:线性(linter)、减速（ease）、加速（ease-in）、减速（ease-out）、先加速后减速(ease-in-out)
+- 延迟执行时间(transition-delay):过渡延迟。多长时间后再执行这个过渡动画。
 
 ## animation
