@@ -8,19 +8,19 @@
 
 - 旋转(roate(30deg)):以对角线中心顺时针选装30度
 
-![旋转](/static/css3%E5%8A%A8%E7%94%BB-1.png)
+![旋转](/notes/css3动画/static/css3动画-2.png)
 - 移动(translate(100px,20px)):整体向右平移100px,向下平移20px。
 
-![移动](/static/css3%E5%8A%A8%E7%94%BB-2.png)
+![移动](/notes/css3动画/static/css3动画-2.png)
 - 缩放(scale(2,1.5)):以对角线中心到水平方向左右各延长1倍，垂直方向延长0.5倍
 
-![缩放](/static/css3%E5%8A%A8%E7%94%BB-3.png)
+![缩放](/notes/css3动画/static/css3动画-2.png)
 - 扭曲(skew(30deg,10deg)):垂直轴逆时针偏移30度，水平方向顺时针方向偏移10度
 
-![扭曲](/static/css3%E5%8A%A8%E7%94%BB-4.png)
+![扭曲](/notes/css3动画/static/css3动画-2.png)
 - 矩阵(matrix（a,b,c,d,e,f):以上的实现都是以这个矩阵为基础的
 
-![矩阵](/static/css3%E5%8A%A8%E7%94%BB-5.png)
+![矩阵](/notes/css3动画/static/css3动画-2.png)
 
 [详细参考:理解CSS3 transform中的Matrix(矩阵)](https://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/)
 
