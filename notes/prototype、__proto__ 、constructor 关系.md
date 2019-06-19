@@ -1,0 +1,1 @@
+# prototype、__proto__ 、constructor 关系
