@@ -15,7 +15,7 @@
 - 扭曲(skew(30deg,10deg)):垂直轴逆时针偏移30度，水平方向顺时针方向偏移10度
 ![扭曲](https://github.com/gu091120/my-notes/blob/master/static/css3%E5%8A%A8%E7%94%BB-4.png)
 - 矩阵(matrix（a,b,c,d,e,f):以上的实现都是以这个矩阵为基础的
-![矩阵](https://github.com/gu091120/my-notes/blob/master/static/css3%E5%8A%A8%E7%94%BB-5.png)
+![矩阵](/static/css3%E5%8A%A8%E7%94%BB-5.png)
 
 [详细参考:理解CSS3 transform中的Matrix(矩阵)](https://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/)
 
