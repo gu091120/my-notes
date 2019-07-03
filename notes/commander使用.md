@@ -42,7 +42,7 @@
 可以自定义命令
 
 ```
-.command("start <dir> [other...]" )
+.command("start <dir> [other...]","描述内容" )
 .action((dir,other)=>{
     console.log(`dir %10s %10j`,dir,other)
 })
