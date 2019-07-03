@@ -42,8 +42,36 @@
 可以自定义命令
 
 ```
-.command("start <dir> [other...]","描述内容" )
-.action((dir,other)=>{
-    console.log(`dir %10s %10j`,dir,other)
+.command("start <dir> [otherOption...]")
+.alias("st") //短命令
+.description("描述")
+.action((dir,otherOption)=>{
+    console.log("dir:%s\n",dir);
+    console.log("otherOption:%j\n",otherOption);
+})
+.on("--help",()=>{ //在 --help 时添加自定义输出
+    console.log('');
+    console.log('Examples:');
+    console.log('');
+    console.log('  $ start ../dir');
+    console.log('  $ st ../dir otherOption  otherOption otherOption');
 })
 ```
+
+## arguments
+
+获取未定义的命令 和 参数,可以用来对错误输入进行正确引导
+```
+program
+  .version('0.1.0')
+  .arguments('<cmd> [env]')
+  .action(function (cmd, env) {
+     cmdValue = cmd;
+     envValue = env;
+  });
+
+```
+
+## help 
+
+自定义 定义全局的  `--help 输出`
