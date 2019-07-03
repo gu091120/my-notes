@@ -75,3 +75,11 @@ program
 ## help 
 
 自定义 定义全局的  `--help 输出`
+```
+program.on('--help', function(){
+  console.log('')
+  console.log('Examples:');
+  console.log('  $ custom-help --help');
+  console.log('  $ custom-help -h');
+});
+```
