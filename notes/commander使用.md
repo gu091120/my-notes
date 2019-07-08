@@ -72,9 +72,9 @@ program
 
 ```
 
-## help 
+## on 
 
-自定义 定义全局的  `--help 输出`
+#### 自定义 定义全局的  `--help 输出`
 ```
 program.on('--help', function(){
   console.log('')
@@ -83,3 +83,17 @@ program.on('--help', function(){
   console.log('  $ custom-help -h');
 });
 ```
+
+### 监听退出 `exit`
+
+```
+process.on('exit', () => {
+  console.log()
+})
+```
+
+## usage 
+
+设置usage值
+
+
