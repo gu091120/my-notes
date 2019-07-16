@@ -1,5 +1,40 @@
 
 # babel 使用
+
+## 转译过程
+
+ES6 代码 => 解析代码生成AST语法树(parse) => 遍历AST语法树，转译成ES5(transform) => 输出 ES5(generate)
+
+### 解析代码，生成AST语法树
+
+这里主要用到了(`babel-parser`)[https://github.com/babel/babel/tree/master/packages/babel-parser],是babel 的解析器，将javascript 解析成 AST 语法树， 默认只支持 `javascript` 的部分语法， 通过在 `presets` 设置：
+
+- @babel/preset-env :解析高级的JavaScript语法
+- @babel/preset-flow ：解析 flow 语法
+- @babel/preset-react ：解析 react
+- @babel/preset-typescript ：解析 typescript 
+
+### 遍历AST语法树，转译成ES5
+#### 转译成ES5
+通过 (`babel-core`)[https://github.com/babel/babel/tree/master/packages/babel-core] 也只能将 ES6 部分转译成 ES5的代码，也需要像解析时一样，在 `presets` 设置：
+
+- @babel/preset-env : 转译高级的JavaScript语法
+- @babel/preset-flow ：转译 flow 语法
+- @babel/preset-react ：转译 react
+- @babel/preset-typescript ：转译 typescript 
+
+### 调用plugin
+
+
+
+
+
+
+
+
+
+
+## 配置文件
  .babelrc 文件配置
 
 ```
