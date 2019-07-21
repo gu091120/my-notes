@@ -56,13 +56,11 @@ var a = 11;
 
 ### 遍历AST语法树，先调用plugin，再用`presets`配置转译成`ES5`
 
-### 调用`plugin`
+#### 调用`plugin`
 
 官方的许多 plugin  其实和 preset 有类似的功能，preset 将所有可能用到高级语法都注入，而像 `@babel/plugin-transform-arrow-functions` 这个 plugin 主要是针对箭头函数的，可以做到较少的引入，但是自定义的工作量就比较高。
 
 多个 plugin 的执行顺序：从数组最后往前依次执行
-
-
 
 
 
@@ -81,10 +79,16 @@ var a = 11;
 
 
 
+### 输出 ES5 (`generate`)
+
+最后将转译后AST语法树，通过[`@babel/generator`](https://github.com/babel/babel/tree/master/packages/babel-generator)输出为ES5的语法
 
 
 
 
+## 转译的方式
+
+- 对每个文件单独处理
 
 
 
