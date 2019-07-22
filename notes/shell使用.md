@@ -22,15 +22,24 @@
 
 ### 变量
 
-
 #### 变量类型
 
-- 环境变量 :`env`来查看当前环境变量`
-- 自定义变量:`set`查看自定义变量
-- 局部变量
+-   环境变量（全局变量） :`env`来查看当前环境变量。
 
+    -   `HOME`:用户主目录
+    -   `PATH`:Shell 查找命令的目录列表，由冒号分隔
 
-> 常用的环境`?`:关于上个运行命令的回传值,一般成功会是0。`$`:当前进程id
+    ```
+    #添加环境变量
+    path=$PATH:/other/bin
+    export $path
+    ```
+
+-   自定义变量（局部变量）:`set`查看自定义变量。
+    -   `?`:关于上个运行命令的回传值,一般成功会是 0。
+    -   `$`:当前进程 id
+
+> 环境变量和自定变量区别，自定义变量不能被`子 bash`继承，但是可以通过 `export`转为零时环境变量
 
 #### 定义变量
 
@@ -47,6 +56,56 @@ readonly name
 unset name
 
 ```
+
+#### `read` 键盘输入变量
+
+```
+#!/bin/bash
+
+read name
+
+echo $name
+
+```
+
+#### 匹配删除与替换
+
+```
+#!/bin/bash
+path=/usr/bin:/usr/sdf/bin:/dfaf/bin:/ss/
+echo ${path#/*bin:}
+# /usr/sdf/bin:/dfaf/bin:/ss/
+
+echo ${path##/*bin:}
+# /ss/
+
+echo ${path%/bin:*}
+# /usr/bin:/usr/sdf/bin/:/dfaf
+
+echo ${path%%/bin:*}
+# /usr
+
+echo ${path/bin/BIN}
+/usr/BIN:/usr/sdf/bin:/dfaf/bin:/ss/
+
+echo ${path//bin/BIN}
+/usr/BIN:/usr/sdf/BIN:/dfaf/BIN:/ss/
+```
+
+删除
+
+-   `*`:通配符号
+-   `#`:向左匹配，最短的
+-   `##`:向左匹配，最长的
+-   `%`:向右匹配，最短的
+-   `%%`:向左匹配，最长的
+
+替换
+
+- `/`:匹配第一个替换
+- `//`:匹配全部替换 
+
+
 
 ### 数组
 
@@ -73,13 +132,12 @@ echo sum //3
 -   `${a} -ge ${b}` : a >= b
 -   `${a} -ie ${b}` : b <= a
 
-```
 文件测试运算符
 
 ```
 
 #!/bin/bash
-file="/var/www/runoob/test.sh"  
+file="/var/www/runoob/test.sh"
 if [ -r $file ]
 then
 echo "文件可读"
@@ -127,7 +185,8 @@ fi
 
 ### 流程控制
 
-- if-else
+-   if-else
+
 ```
 
 if [ ${a} > ${b}]
@@ -142,7 +201,7 @@ fi
 
 ```
 
-- for
+-   for
 
 ```
 
@@ -154,7 +213,8 @@ done
 
 ```
 
-- while
+-   while
+
 ```
 
 \$int=1
@@ -179,6 +239,8 @@ sum 1 2 //3
 ```
 
 ### 流的控制
+
+```
 
 ```
 
