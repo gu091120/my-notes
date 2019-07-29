@@ -2,7 +2,10 @@
 
 ## 常用操作
 - 创建新分支 :git checkout -b [newbranchname] 
-- 将分支推送到远程仓库:git push --set-upstream origin [branchname]
+- 将分支推送到远程仓库:git push --set-upstream origin 
+[branchname]
+
+- 版本会退:git reset --heard [版本号]
 - 删除本地分支:git branch -d [branchname]
 - 删除远程分支:git push origin --delete [branchname]
 - 查看提交记录:git log -p -2
