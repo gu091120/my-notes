@@ -1,5 +1,8 @@
 # preact实现原理
-# preact
+
+## 简单实现
+https://codesandbox.io/s/wnzqpozl08
+
 ## jsx解析
 通过babel plugins babel-plugin-transform-react-jsx 编译DOM结构
 
@@ -44,6 +47,11 @@ diff主要做三件事
 #### idiff 
 
 调用idiff()生成真实DOM
+
+
+
+
+
 
 
 
