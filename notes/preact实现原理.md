@@ -1,7 +1,7 @@
 # preact实现原理
 
 ## 简单实现
-https://codesandbox.io/s/wnzqpozl08
+https://codesandbox.io/s/wnzqpozl08◊
 
 ## jsx解析
 通过babel plugins babel-plugin-transform-react-jsx 编译DOM结构
