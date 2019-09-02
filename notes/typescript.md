@@ -304,7 +304,7 @@
     color = "red"; //ok
     color = "yellow"; //error
     ```
-
+## `enum`   枚举
 
 
 ## 内置类型
