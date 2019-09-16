@@ -304,8 +304,31 @@
     color = "red"; //ok
     color = "yellow"; //error
     ```
-## `enum`   枚举
 
+## `enum` 枚举
+
+## `namespace` 命名空间
+
+    多个文件的`namespace`相同的话，内部使用，可以像一个页面一样，但是需要引入依赖文件
+
+    ```typescript
+    //a.ts
+    namespace Validation{
+        export interface StringValidator{
+            isAcceptable(s:string):boolean
+        }
+    }
+
+
+    //b.ts
+    /// <reference path="a.ts" />
+    namespace Validation{
+        export class NumberValiadtor implements StringValidator{
+            isAcceptable(s:string):boolean
+        }
+    }
+
+    ```
 
 ## 内置类型
 
