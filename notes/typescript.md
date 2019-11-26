@@ -330,8 +330,81 @@
 
     ```
 
+## keyof 
+
+遍历
+
+
 ## 内置类型
+### Partial
+遍历属性置为可选
+```typescript
+interface AccountInfo{
+    name: string 
+    email: string 
+    age: number 
+    vip: 0|1 // 1 是vip ，0 是非vip
+}
+
+// 只需部分属性
+const xiaoming :Partial<AccountInfo> = {
+    name:"xiaoming",
+    age:12
+}
+
+```
+### Require
+遍历属性置为必选
+
+### Readonly
+遍历属性置为可读
+
+### Record<T,K>
+将T（单个或者多个属性）遍历生成 统一一个类 K
+
+```typescript
+type Persion = Record<"name"|"age",string> 
+// 相当于 
+type Persion1 = {
+    name:string;
+    age:string;
+}
 
 ```
 
+
+### Pick<T, K>
+在T类型中选择你的K属性（K必须是T里面的属性之一）
+```typescript
+interface AccountInfo{
+    name: string 
+    email: string 
+    age: number 
+    vip: 0|1 // 1 是vip ，0 是非vip
+}
+
+const xiaoming:Pick<AccountInfo,"name"|"age">={
+    name:"xiaoming",
+    age:12
+}
+
 ```
+
+### Exclude<T,K>
+判断T是不是K的子集，是：返回never,否：T
+```typescript
+interface AccountInfo{
+    name: string 
+    email: string 
+    age: number 
+    vip: 0|1 // 1 是vip ，0 是非vip
+}
+
+const xiaoming :Exclude<AccountInfo，"vip"|"email">={
+    name:"xiaoming",
+    age:12
+}
+
+```
+
+
