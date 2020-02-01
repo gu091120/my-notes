@@ -390,6 +390,10 @@ const xiaoming:Pick<AccountInfo,"name"|"age">={
 
 ```
 
+
+### Omit<T, K>
+Pick的取反操作
+
 ### Exclude<T,K>
 判断T是不是K的子集，是：返回never,否：T
 ```typescript
