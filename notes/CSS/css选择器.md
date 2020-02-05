@@ -76,14 +76,7 @@
     a[rel~="next"]:匹配属性是多个以空格分开的值的其中一个
     a[lang|="en"]:可以匹配带斜杠的值（en,en-us）
     ```
--   `:first-child`：第一个子元素
--   `:last-child`:最后一个子元素
--   `:nth-child(n)`:子代选择第 n 个(n 可以是公式)
--   `p:nth-child(2)`:第二个子元素
--   `p:nth-child(odd/even)`:所以奇数/偶数子节点
--   `P:nth-child(3n+0)`:所有 3 的倍数子节点
--   `:nth-last-child(n)`:倒数子节点
--   `:not()`:选择除此之外的元素,`p:not(.other)`
+
 
 ### 优先级运算
 
