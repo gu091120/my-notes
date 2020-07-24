@@ -307,6 +307,21 @@
 
 ## `enum` 枚举
 
+枚举作为对象的key
+```typescript
+enum Info{
+    NAME="name"
+    AGE="age"
+}
+
+const Person:{
+    [name in Info]:string
+}
+
+
+```
+
+
 ## `namespace` 命名空间
 
     多个文件的`namespace`相同的话，内部使用，可以像一个页面一样，但是需要引入依赖文件
@@ -410,5 +425,7 @@ const xiaoming :Exclude<AccountInfo，"vip"|"email">={
 }
 
 ```
+
+
 
 
