@@ -12,6 +12,8 @@
 
 
  ### 块级格式化上下文（block formatting context）
+产生的条件：
+
 
 
  ### 层级上下文（stacking context）
